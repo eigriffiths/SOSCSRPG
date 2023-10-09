@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Engine.Factories
 {
-    internal class WorldFactory
+    internal static class WorldFactory
     {
-        internal World CreateWorld()
+        internal static World CreateWorld()
         {
             World newWorld = new World();
 
@@ -24,6 +24,30 @@ namespace Engine.Factories
             newWorld.AddLocation(-2, -1, "Farmers Field", 
                 "There are rows of corn growing here, with giant rats!",
                 "..");
+
+            newWorld.AddLocation(-1, 0, "Trading Shop",
+                "The shop of Susan, the trader.",
+                "/Engine;component/Images/Locations/Trader.png");
+
+            newWorld.AddLocation(0, 0, "Town square",
+                "You see a fountain here.",
+                "/Engine;component/Images/Locations/TownSquare.png");
+
+            newWorld.AddLocation(1, 0, "Town Gate",
+                "There is a gate here, protecting the town from giant spiders.",
+                "/Engine;component/Images/Locations/TownGate.png");
+
+            newWorld.AddLocation(2, 0, "Spider Forest",
+                "The trees in this forest are covered with spider webs.",
+                "/Engine;component/Images/Locations/SpiderForest.png");
+
+            newWorld.AddLocation(0, 1, "Herbalist's hut",
+                "You see a small hut, with plants drying from the roof.",
+                "/Engine;component/Images/Locations/HerbalistsHut.png");
+
+            newWorld.AddLocation(0, 2, "Herbalist's garden",
+                "There are many plants here, with snakes hiding behind them.",
+                "/Engine;component/Images/Locations/HerbalistsGarden.png");
 
             return newWorld;
         }
