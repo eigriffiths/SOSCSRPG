@@ -16,7 +16,9 @@ namespace Engine.Factories
             _standardGameItems = new List<GameItem>
             {
                 new Weapon(1001, "Pointy Stick", 1, 1, 2),
-                new Weapon(1002, "Rusy Sword", 5, 1, 3)
+                new Weapon(1002, "Rusy Sword", 5, 1, 3),
+                new GameItem(9001, "Snake fang", 1),
+                new GameItem(9002, "Snakeskin", 2)
             };
         }
 
@@ -31,6 +33,5 @@ namespace Engine.Factories
 
             return null;
         }
-
     }
 }

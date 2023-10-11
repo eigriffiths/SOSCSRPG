@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,11 @@ namespace Engine.Models
 {
     public class Player : BaseNotificationClass
     {
+        public Player()
+        {
+            Inventory = new ObservableCollection<GameItem>();  
+        }
+
         private string _name;
         private string _characterClass;
         private int _hitPoints;
@@ -69,5 +75,8 @@ namespace Engine.Models
                 OnPropertyChanged(nameof(Gold));
             }
         }
+
+        public ObservableCollection<GameItem> Inventory { get; set; }
+
     }
 }
