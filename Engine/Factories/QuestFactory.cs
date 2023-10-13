@@ -29,9 +29,6 @@ namespace Engine.Factories
                 rewardItems));
         }
 
-        internal static Quest GetQuestByID(int id)
-        {
-            return _quests.FirstOrDefault(q => q.Id == id);
-        }
+        internal static Quest GetQuestByID(int id) => _quests.FirstOrDefault(q => q.Id == id);
     }
 }

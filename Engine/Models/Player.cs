@@ -10,11 +10,6 @@ namespace Engine.Models
 {
     public class Player : BaseNotificationClass
     {
-        public Player()
-        {
-            Inventory = new ObservableCollection<GameItem>();  
-        }
-
         private string _name;
         private string _characterClass;
         private int _hitPoints;
@@ -78,5 +73,12 @@ namespace Engine.Models
 
         public ObservableCollection<GameItem> Inventory { get; set; }
 
+        public ObservableCollection<QuestStatus> Quests { get; set; }
+
+        public Player()
+        {
+            Inventory = new ObservableCollection<GameItem>();
+            Quests = new ObservableCollection<QuestStatus>();
+        }
     }
 }
